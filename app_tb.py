@@ -3,7 +3,10 @@ import pandas as pd
 import joblib
 
 # Load model yang sudah disimpan
-model = joblib.load('model_tb.pkl')
+import os
+
+model_path = os.path.join(os.path.dirname(__file__), 'model_tb.pkl')
+model = joblib.load(model_path)
 
 st.title("Prediksi Risiko Tuberculosis (TB)")
 
